@@ -17,7 +17,6 @@ async function getFilterOptions() {
 
     populateFilterOptions(genres, languageData);
 }
-
 function populateFilterOptions(genres, languages) {
     const genreSelect = document.getElementById('genre');
     genres.forEach(genre => {
@@ -28,6 +27,9 @@ function populateFilterOptions(genres, languages) {
     });
 
     const languageSelect = document.getElementById('language');
+    // Sort languages alphabetically by 'english_name'
+    languages.sort((a, b) => a.english_name.localeCompare(b.english_name));
+
     languages.forEach(language => {
         const option = document.createElement('option');
         option.value = language.iso_639_1;
