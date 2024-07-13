@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Listing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./BornDeveloper.jpg">
+
+</head>
+
+<body>
+    <header>
+        <h1>Movie Listing</h1>
+    </header>
+    <main>
+        <section class="filters">
+            <div class="filter-group">
+                <label for="genre">Genre:</label>
+                <select id="genre">
+                    <option value="">All</option>
+                    <!-- Genres will be dynamically inserted here -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="language">Language:</label>
+                <select id="language">
+                    <option value="">All</option>
+                    <!-- Languages will be dynamically inserted here -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="year">Year:</label>
+                <input type="number" id="year" placeholder="Year" min="1900" max="2024">
+            </div>
+            <button id="filterButton">Filter</button>
+        </section>
+        <section class="movies">
+            <div id="movieList" class="movie-list">
+                <!-- Movies will be dynamically inserted here -->
+            </div>
+            <div class="pagination">
+                <button id="prevPage" disabled>Previous</button>
+                <span id="pageNumber">1</span>
+                <button id="nextPage">Next</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
